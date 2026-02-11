@@ -1,5 +1,5 @@
-resource "azurerm_hpc_cache_access_policy" "hpc_cache_access_policys" {
-  for_each = var.hpc_cache_access_policys
+resource "azurerm_hpc_cache_access_policy" "hpc_cache_access_policies" {
+  for_each = var.hpc_cache_access_policies
 
   hpc_cache_id = each.value.hpc_cache_id
   name         = each.value.name

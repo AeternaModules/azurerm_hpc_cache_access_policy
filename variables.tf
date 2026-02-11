@@ -1,6 +1,6 @@
-variable "hpc_cache_access_policys" {
+variable "hpc_cache_access_policies" {
   description = <<EOT
-Map of hpc_cache_access_policys, attributes below
+Map of hpc_cache_access_policies, attributes below
 Required:
     - hpc_cache_id
     - name
@@ -31,7 +31,7 @@ EOT
   }))
   validation {
     condition = alltrue([
-      for k, v in var.hpc_cache_access_policys : (
+      for k, v in var.hpc_cache_access_policies : (
         length(v.access_rule) >= 1 && length(v.access_rule) <= 3
       )
     ])
